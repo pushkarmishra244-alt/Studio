@@ -1,0 +1,6 @@
+{
+  "name": "Creative Experience Studio",
+  "description": "An agency-quality landing page featuring immersive, Apple-style scroll canvas animations, neumorphic surfaces, and responsive interactive elements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
