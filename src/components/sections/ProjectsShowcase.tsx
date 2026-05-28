@@ -168,7 +168,7 @@ export function ProjectsShowcase() {
 
       const rect = section.getBoundingClientRect();
       const scrollHeight = section.clientHeight - window.innerHeight;
-      const progress = Math.max(0, Math.min(1, Math.abs(rect.top) / scrollHeight));
+      const progress = Math.max(0, Math.min(1, -rect.top / scrollHeight));
 
       currentProgressRef.current = progress;
 
@@ -178,16 +178,16 @@ export function ProjectsShowcase() {
 
           // Evaluate active project index bands
           let activeIndex = 0;
-          if (progress >= 0.08 && progress < 0.23) activeIndex = 1;
-          else if (progress >= 0.23 && progress < 0.38) activeIndex = 2;
-          else if (progress >= 0.38 && progress < 0.53) activeIndex = 3;
-          else if (progress >= 0.53 && progress < 0.68) activeIndex = 4;
-          else if (progress >= 0.68 && progress < 0.83) activeIndex = 5;
+          if (progress >= 0.05 && progress < 0.20) activeIndex = 1;
+          else if (progress >= 0.20 && progress < 0.35) activeIndex = 2;
+          else if (progress >= 0.35 && progress < 0.50) activeIndex = 3;
+          else if (progress >= 0.50 && progress < 0.65) activeIndex = 4;
+          else if (progress >= 0.65 && progress < 0.80) activeIndex = 5;
 
           setActiveProj(activeIndex);
 
           // Evaluates bottom CTA visibility zone
-          setShowCta(progress >= 0.82);
+          setShowCta(progress >= 0.80);
 
           tickingRef.current = false;
         });
@@ -209,7 +209,7 @@ export function ProjectsShowcase() {
     <section
       ref={sectionRef}
       id="showcase"
-      className="relative w-full h-[500vh] bg-zinc-950 text-white overflow-clip select-none"
+      className="relative w-full h-[220vh] md:h-[300vh] bg-zinc-950 text-white overflow-clip select-none"
     >
       {/* Sticky Inner Frame */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">
