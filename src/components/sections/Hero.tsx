@@ -229,7 +229,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[300vh] sm:h-[350vh] lg:h-[400vh] bg-background-custom select-none"
+      className="relative w-full h-[400vh] bg-background-custom select-none"
     >
       {/* Sticky Inner Frame Wrapper */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">
@@ -260,12 +260,12 @@ export function Hero() {
 
         {/* Dynamic Card annotations layout */}
         <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto px-6 md:px-12 flex items-center z-20 pointer-events-none">
-          {/* Card 1: Centered bottom on mobile, left on desktop */}
+          {/* Card 1: Left */}
           <div
-            className={`absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-auto md:left-12 md:translate-x-0 w-[calc(100%-2.5rem)] md:w-auto max-w-sm card-surface border-zinc-200/50 p-5 md:p-8 space-y-4 transition-all duration-500 transform ${
+            className={`absolute left-6 md:left-12 max-w-sm card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
               activeCard === 1
-                ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-                : "opacity-0 scale-95 translate-y-6 pointer-events-none"
+                ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
+                : "opacity-0 scale-95 -translate-x-6 pointer-events-none"
             }`}
           >
             <div className="inline-flex p-2 rounded-xl bg-accent/10 text-accent">
@@ -277,12 +277,12 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Card 2: Centered bottom on mobile, right on desktop */}
+          {/* Card 2: Right */}
           <div
-            className={`absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-auto md:right-12 md:left-auto md:translate-x-0 w-[calc(100%-2.5rem)] md:w-auto max-w-sm card-surface border-zinc-200/50 p-5 md:p-8 space-y-4 transition-all duration-500 transform ${
+            className={`absolute right-6 md:right-12 max-w-sm card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
               activeCard === 2
-                ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-                : "opacity-0 scale-95 translate-y-6 pointer-events-none"
+                ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
+                : "opacity-0 scale-95 translate-x-6 pointer-events-none"
             }`}
           >
             <div className="inline-flex p-2 rounded-xl bg-accent/10 text-accent">
@@ -294,9 +294,9 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Card 3: Centered bottom on mobile & desktop */}
+          {/* Card 3: Bottom Center */}
           <div
-            className={`absolute bottom-6 left-1/2 -translate-x-1/2 max-w-sm w-[calc(100%-2.5rem)] card-surface border-zinc-200/50 p-5 md:p-8 space-y-4 text-center transition-all duration-500 transform ${
+            className={`absolute bottom-12 left-1/2 -translate-x-1/2 max-w-sm w-[calc(100%-2.5rem)] card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 text-center transition-all duration-500 transform ${
               activeCard === 3
                 ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 scale-95 translate-y-6 pointer-events-none"
@@ -317,20 +317,20 @@ export function Hero() {
           id="hero-text-overlay"
           className="relative max-w-3xl mx-auto px-6 text-center space-y-7 z-30 transition-all duration-300 pointer-events-auto"
         >
-          <div className="space-y-3">
+          <div className="space-y-2">
             <EyebrowBadge>EXPERIENCE STUDIO // 2026</EyebrowBadge>
-            <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-950 dark:text-white leading-tight">
+            <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-950 dark:text-white leading-tight">
               AESTHETIC CORES.
               <br />
               <span className="text-muted-custom font-normal">CINEMATIC SCROLLS.</span>
             </h1>
           </div>
           
-          <p className="font-sans text-[13px] md:text-base text-muted-custom max-w-md mx-auto leading-relaxed">
+          <p className="font-sans text-sm md:text-base text-muted-custom max-w-md mx-auto leading-relaxed">
             Architecting agency-quality digital platforms driven by high-performance canvas geometries, premium neumorphic surfaces, and responsive interactive products.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
             <Button variant="primary" href="#services" showArrow>
               Explore Studio
             </Button>
@@ -340,7 +340,7 @@ export function Hero() {
           </div>
 
           {/* Scroll indicators */}
-          <div className="flex flex-col items-center gap-1.5 pt-12 md:pt-16 text-zinc-400 font-mono text-[9px] uppercase tracking-widest animate-bounce">
+          <div className="flex flex-col items-center gap-1.5 pt-16 text-zinc-400 font-mono text-[9px] uppercase tracking-widest animate-bounce">
             <span>Scroll Scrub for Core</span>
             <ArrowDown className="w-3.5 h-3.5" />
           </div>

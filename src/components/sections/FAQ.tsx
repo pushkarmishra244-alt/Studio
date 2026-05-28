@@ -42,7 +42,7 @@ export function FAQ() {
         {/* Section Header */}
         <AnimatedSection className="text-center space-y-4 max-w-xl mx-auto">
           <EyebrowBadge>COMMON ANSWERS</EyebrowBadge>
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+          <h2 className="font-sans text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
             ACCESSED STRATEGIES.
             <br />
             <span className="text-muted-custom font-normal">SPECIFICATIONS RESOLVED.</span>

@@ -12,7 +12,7 @@ export function BentoFeatures() {
         {/* Section Header */}
         <AnimatedSection className="max-w-xl space-y-4">
           <EyebrowBadge>BENTO SHOWCASE</EyebrowBadge>
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
+          <h2 className="font-sans text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
             INSTRUMENT PANELS.
             <br />
             <span className="text-muted-custom font-normal">CLINICAL PRECISION SYSTEMS.</span>
@@ -26,13 +26,13 @@ export function BentoFeatures() {
         <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           
           {/* Bento Card 1: Interactive terminal block (Span 2 on desktop) */}
-          <AnimatedItem className="md:col-span-2 group card-surface p-5 sm:p-8 flex flex-col sm:flex-row gap-6 hover:shadow-lg justify-between items-stretch overflow-hidden">
-            <div className="space-y-5 flex flex-col justify-between max-w-xs">
-              <div className="space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-accent/10 text-accent">
+          <AnimatedItem className="md:col-span-2 group card-surface p-6 md:p-8 flex flex-col md:flex-row gap-6 hover:shadow-lg justify-between items-stretch overflow-hidden">
+            <div className="space-y-6 flex flex-col justify-between max-w-xs">
+              <div className="space-y-4">
+                <div className="inline-flex p-3 rounded-xl bg-accent/10 text-accent">
                   <Sliders className="w-4.5 h-4.5" />
                 </div>
-                <h3 className="font-sans text-base sm:text-lg font-bold tracking-tight text-foreground-custom">
+                <h3 className="font-sans text-lg font-bold tracking-tight text-foreground-custom">
                   Interactive Core Optimizer
                 </h3>
               </div>
@@ -51,12 +51,12 @@ export function BentoFeatures() {
           </AnimatedItem>
 
           {/* Bento Card 2: Workflow Pipeline (Span 1 on desktop) */}
-          <AnimatedItem className="group card-surface p-5 sm:p-8 flex flex-col hover:shadow-lg justify-between items-stretch">
-            <div className="space-y-3 mb-4">
-              <div className="inline-flex p-2.5 rounded-xl bg-accent/10 text-accent">
+          <AnimatedItem className="group card-surface p-6 md:p-8 flex flex-col hover:shadow-lg justify-between items-stretch">
+            <div className="space-y-4 mb-4">
+              <div className="inline-flex p-3 rounded-xl bg-accent/10 text-accent">
                 <Zap className="w-4.5 h-4.5" />
               </div>
-              <h3 className="font-sans text-base sm:text-lg font-bold tracking-tight text-foreground-custom">
+              <h3 className="font-sans text-lg font-bold tracking-tight text-foreground-custom">
                 Workflow Sync
               </h3>
             </div>
@@ -72,12 +72,12 @@ export function BentoFeatures() {
           </AnimatedItem>
 
           {/* Bento Card 3: Orbiting satellite (Span 1 on desktop) */}
-          <AnimatedItem className="group card-surface p-5 sm:p-8 flex flex-col hover:shadow-lg justify-between items-stretch">
-            <div className="space-y-3 mb-4">
-              <div className="inline-flex p-2.5 rounded-xl bg-accent/10 text-accent">
+          <AnimatedItem className="group card-surface p-6 md:p-8 flex flex-col hover:shadow-lg justify-between items-stretch">
+            <div className="space-y-4 mb-4">
+              <div className="inline-flex p-3 rounded-xl bg-accent/10 text-accent">
                 <Eye className="w-4.5 h-4.5" />
               </div>
-              <h3 className="font-sans text-base sm:text-lg font-bold tracking-tight text-foreground-custom">
+              <h3 className="font-sans text-lg font-bold tracking-tight text-foreground-custom">
                 Orbiting Matrices
               </h3>
             </div>
@@ -93,18 +93,18 @@ export function BentoFeatures() {
           </AnimatedItem>
 
           {/* Bento Card 4: CSS 3D Cube (Span 2 on desktop) */}
-          <AnimatedItem className="md:col-span-2 group card-surface p-5 sm:p-8 flex flex-col sm:flex-row gap-6 hover:shadow-lg justify-between items-stretch overflow-hidden">
+          <AnimatedItem className="md:col-span-2 group card-surface p-6 md:p-8 flex flex-col md:flex-row gap-6 hover:shadow-lg justify-between items-stretch overflow-hidden">
             {/* Cube visual asset */}
             <div className="flex-1 flex items-center justify-center min-h-[190px]">
               <Cube3D />
             </div>
 
-            <div className="space-y-5 flex flex-col justify-between max-w-xs">
-              <div className="space-y-3">
-                <div className="inline-flex p-2.5 rounded-xl bg-accent/10 text-accent">
+            <div className="space-y-6 flex flex-col justify-between max-w-xs">
+              <div className="space-y-4">
+                <div className="inline-flex p-3 rounded-xl bg-accent/10 text-accent">
                   <Layers className="w-4.5 h-4.5" />
                 </div>
-                <h3 className="font-sans text-base sm:text-lg font-bold tracking-tight text-foreground-custom">
+                <h3 className="font-sans text-lg font-bold tracking-tight text-foreground-custom">
                   3D Matrix Transform
                 </h3>
               </div>

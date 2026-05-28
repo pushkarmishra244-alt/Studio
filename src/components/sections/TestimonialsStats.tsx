@@ -31,7 +31,7 @@ export function TestimonialsStats() {
         <AnimatedSection className="space-y-12">
           <div className="space-y-4">
             <EyebrowBadge>VERIFIABLE METRICS</EyebrowBadge>
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
+            <h2 className="font-sans text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
               PROVEN PERFORMANCE.
               <br />
               <span className="text-muted-custom font-normal">MEASURED CORES.</span>
@@ -43,7 +43,7 @@ export function TestimonialsStats() {
 
           <div className="space-y-6">
             {stats.map((st) => (
-              <div key={st.label} className="card-surface p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 md:gap-8 hover:shadow-md">
+              <div key={st.label} className="card-surface p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 hover:shadow-md">
                 <div className="font-mono text-3xl sm:text-4xl font-extrabold text-accent shrink-0 tracking-tight">
                   {st.value}
                 </div>
@@ -57,15 +57,15 @@ export function TestimonialsStats() {
         </AnimatedSection>
 
         {/* Right Column: Premium Reviews */}
-        <AnimatedSection stagger className="space-y-8 md:mt-16 bg-transparent">
+        <AnimatedSection stagger className="space-y-8 md:mt-16">
           <span className="block font-mono text-[9px] uppercase tracking-widest text-zinc-400 font-bold">
             CLIENT ATTESTATIONS
           </span>
 
-          <div className="space-y-6">
+          <div className="space-y-6 md:space-y-8">
             {reviews.map((rev) => (
-              <AnimatedItem key={rev.author} className="card-surface p-5 sm:p-8 space-y-5 hover:shadow-md relative overflow-hidden bg-background">
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-zinc-150/40 dark:text-zinc-900 pointer-events-none z-0" />
+              <AnimatedItem key={rev.author} className="card-surface p-8 space-y-5 hover:shadow-md relative overflow-hidden">
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-zinc-100 dark:text-zinc-900 pointer-events-none z-0" />
                 
                 <p className="font-sans text-xs sm:text-sm text-foreground-custom leading-relaxed italic relative z-10">
                   "{rev.quote}"

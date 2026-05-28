@@ -35,7 +35,7 @@ export function ProcessMethodology() {
         {/* Section Header */}
         <AnimatedSection className="max-w-xl space-y-4">
           <EyebrowBadge>METHODOLOGY PATH</EyebrowBadge>
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
+          <h2 className="font-sans text-3xl md:text-4xl font-extrabold tracking-tight text-foreground-custom leading-tight">
             SYSTEMATIC TRANSITION.
             <br />
             <span className="text-muted-custom font-normal">MEASURED DEPLOYMENTS.</span>
@@ -67,9 +67,9 @@ export function ProcessMethodology() {
                 </div>
 
                 {/* Content Panel */}
-                <div className="card-surface p-5 sm:p-8 space-y-4 hover:shadow-md h-[calc(100%-4.5rem)] flex flex-col justify-between">
+                <div className="card-surface p-6 md:p-8 space-y-4 hover:shadow-md h-[calc(100%-4.5rem)] flex flex-col justify-between">
                   <div className="space-y-3">
-                    <h3 className="font-sans text-base sm:text-lg font-bold tracking-tight text-foreground-custom">
+                    <h3 className="font-sans text-[17px] md:text-lg font-bold tracking-tight text-foreground-custom">
                       {st.title}
                     </h3>
                     <p className="font-sans text-xs text-muted-custom leading-relaxed">

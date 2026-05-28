@@ -209,7 +209,7 @@ export function ProjectsShowcase() {
     <section
       ref={sectionRef}
       id="showcase"
-      className="relative w-full h-[350vh] sm:h-[420vh] lg:h-[500vh] bg-zinc-950 text-white overflow-clip select-none"
+      className="relative w-full h-[500vh] bg-zinc-950 text-white overflow-clip select-none"
     >
       {/* Sticky Inner Frame */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">
@@ -223,21 +223,21 @@ export function ProjectsShowcase() {
 
         {/* Dynamic Project slide displays */}
         <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-start z-20 pointer-events-none">
-          <div className="relative max-w-lg w-full px-2 sm:px-0">
+          <div className="relative max-w-lg w-full">
             {projects.map((proj) => {
               const Icon = proj.icon;
               const isActive = activeProj === proj.id;
               return (
                 <div
                   key={proj.id}
-                  className={`absolute top-1/2 left-0 -translate-y-1/2 w-full glass-surface border-zinc-850 bg-zinc-950/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl space-y-4 sm:space-y-5 transition-all duration-500 transform ${
+                  className={`absolute top-1/2 left-0 -translate-y-1/2 w-full glass-surface border-zinc-850 bg-zinc-950/70 p-8 rounded-3xl space-y-5 transition-all duration-500 transform ${
                     isActive
-                      ? "opacity-100 scale-100 translate-x-0 pointer-events-auto shadow-2xl"
+                      ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
                       : "opacity-0 scale-95 -translate-x-8 pointer-events-none"
                   }`}
                 >
                   {/* Category and Icon badge */}
-                  <div className="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+                  <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
                     <span className="font-mono text-[9px] uppercase tracking-widest text-accent font-semibold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                       {proj.category}
@@ -245,9 +245,9 @@ export function ProjectsShowcase() {
                     <Icon className="w-4 h-4 text-zinc-400" />
                   </div>
 
-                  <div className="space-y-1">
-                    <span className="block font-mono text-[9px] text-zinc-500">PROJECT // 0{proj.id}</span>
-                    <h3 className="font-sans text-xl sm:text-2xl font-extrabold tracking-tight text-white leading-none">
+                  <div className="space-y-2">
+                    <span className="block font-mono text-[10px] text-zinc-500">PROJECT // 0{proj.id}</span>
+                    <h3 className="font-sans text-2xl font-extrabold tracking-tight text-white leading-none">
                       {proj.title}
                     </h3>
                   </div>
@@ -256,11 +256,11 @@ export function ProjectsShowcase() {
                     {proj.desc}
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5 pt-1">
+                  <div className="flex flex-wrap gap-1.5 pt-2">
                     {proj.tech.map((t) => (
                       <span
                         key={t}
-                        className="font-mono text-[8px] text-zinc-300 bg-zinc-900/95 border border-zinc-800/80 px-2 py-0.5 rounded-md"
+                        className="font-mono text-[8px] text-zinc-400 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-md"
                       >
                         {t}
                       </span>
@@ -274,17 +274,17 @@ export function ProjectsShowcase() {
 
         {/* Final CTA slide overlay overlay (appears near end of progress) */}
         <div
-          className={`absolute inset-0 z-30 flex flex-col items-center justify-center p-6 bg-zinc-950/90 backdrop-blur-md transition-all duration-700 ${
+          className={`absolute inset-0 z-30 flex flex-col items-center justify-center p-6 bg-zinc-950/80 backdrop-blur-md transition-all duration-700 ${
             showCta ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
           }`}
         >
-          <div className="max-w-md text-center space-y-5 sm:space-y-6">
+          <div className="max-w-md text-center space-y-6">
             <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-accent">GO HIGHER</span>
             <div className="space-y-2">
-              <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight px-4">
+              <h3 className="font-sans text-3xl font-extrabold tracking-tight text-white leading-tight">
                 LAUNCH YOUR PORTAL.
               </h3>
-              <p className="font-sans text-xs text-zinc-400 leading-relaxed max-w-sm mx-auto px-4">
+              <p className="font-sans text-xs text-zinc-400 leading-relaxed max-w-sm mx-auto">
                 Secure a strategic booking with our design team. Let's engineer high-frequency client experience networks natively inside your workspace.
               </p>
             </div>

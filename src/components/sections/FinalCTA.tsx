@@ -20,7 +20,7 @@ export function FinalCTA() {
         <AnimatedSection className="space-y-8 text-left">
           <div className="space-y-4">
             <EyebrowBadge>COMMISSION PORTAL</EyebrowBadge>
-            <h2 className="font-sans text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-zinc-950 dark:text-white">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-foreground-custom">
               COMPILE YOUR
               <br />
               <span className="text-muted-custom font-normal">DIGITAL PORTAL.</span>
@@ -30,17 +30,17 @@ export function FinalCTA() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+          <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
             <button
               onClick={openBooking}
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-900 dark:hover:bg-zinc-100 font-mono text-xs uppercase font-bold tracking-widest cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all shadow-xl min-h-[44px]"
+              className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-900 dark:hover:bg-zinc-100 font-mono text-xs uppercase font-bold tracking-widest cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all shadow-xl"
             >
               <span>Design Consultation</span>
               <ArrowUpRight className="w-4 h-4" />
             </button>
             <a
               href="#faq"
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-muted-custom hover:text-foreground-custom font-sans text-xs uppercase font-semibold tracking-wide cursor-pointer transition-colors min-h-[44px]"
+              className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-muted-custom hover:text-foreground-custom font-sans text-xs uppercase font-semibold tracking-wide cursor-pointer transition-colors"
             >
               System Operations
             </a>

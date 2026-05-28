@@ -33,17 +33,6 @@ export function Navbar() {
     }
   };
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMobileMenuOpen]);
-
   const menuItems = [
     { label: "Services", href: "#services" },
     { label: "Showcase", href: "#showcase" },
@@ -150,13 +139,13 @@ export function Navbar() {
             </div>
 
             {/* Menu Links */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-6">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-sans text-base font-semibold text-zinc-900 dark:text-zinc-100 hover:text-accent p-3 rounded-xl border border-transparent hover:border-zinc-200/40 dark:hover:border-zinc-800/30 hover:bg-zinc-100/50 dark:hover:bg-zinc-900/50 active:scale-[0.98] transition-all"
+                  className="font-sans text-lg font-medium text-foreground-custom hover:text-accent transition-colors py-1"
                 >
                   {item.label}
                 </a>
