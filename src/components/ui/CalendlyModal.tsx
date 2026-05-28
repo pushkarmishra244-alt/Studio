@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { X, Calendar, Clock, CheckCircle, ChevronRight, ChevronLeft } from "lucide-react";
 import { useBooking } from "../../providers/CalendlyProvider";
+import emailjs from "@emailjs/browser";
+
+// =========================================================================
+// EMAILJS CONFIGURATION PLACEHOLDERS
+// Replace these placeholders with your actual EmailJS key/ID credentials!
+// =========================================================================
+const EMAILJS_PUBLIC_KEY = "xJKYKhipYpTnRtT9y";
+const EMAILJS_SERVICE_ID = "service_qajrtod";
+const EMAILJS_TEMPLATE_ID = "template_4th7fzt";
 
 export function CalendlyModal() {
   const { isModalOpen, closeBooking } = useBooking();
@@ -63,16 +72,35 @@ export function CalendlyModal() {
     if (!name || !email) return;
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      // Persist to local bookings
-      const bookingData = { focus, date, timeSlot, name, email, goal, timestamp: new Date().toISOString() };
-      const currentBookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-      currentBookings.push(bookingData);
-      localStorage.setItem("bookings", JSON.stringify(currentBookings));
-      
-      setStep(4);
-    }, 1200);
+    const bookingData = { focus, date, timeSlot, name, email, goal, timestamp: new Date().toISOString() };
+
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      booking_focus: focus,
+      booking_date: date,
+      booking_time: timeSlot,
+      booking_goal: goal || "No additional goals specified.",
+    };
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+        console.log("EmailJS transmission successful:", result.status, result.text);
+        setIsSubmitting(false);
+
+        // Persist to local bookings
+        const currentBookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+        currentBookings.push(bookingData);
+        localStorage.setItem("bookings", JSON.stringify(currentBookings));
+
+        setStep(4);
+      })
+      .catch((error) => {
+        console.error("EmailJS transmission failure:", error);
+        setIsSubmitting(false);
+        alert(`Booking transmission failure: ${error?.text || "Please verify your EmailJS configurations."}`);
+      });
   };
 
   return (

@@ -58,7 +58,8 @@ export function Hero() {
       // Mobile zooms
       const isMobile = window.innerWidth < 768;
       const mobileZoom = isMobile ? 1.35 : 1.0;
-      const zoom = (1.0 + progress * 0.82) * mobileZoom;
+      const zoomProgress = Math.pow(progress, 1.1);
+      const zoom = (1.0 + zoomProgress * 0.72) * mobileZoom;
 
       // Base grid color
       const gridColor = isDark ? "rgba(250, 250, 250, 0.05)" : "rgba(9, 9, 11, 0.04)";
@@ -188,9 +189,9 @@ export function Hero() {
 
           // Evaluate discreet thresholds for annotation cards
           let activeIndex = 0;
-          if (progress >= 0.15 && progress <= 0.42) activeIndex = 1;
-          else if (progress >= 0.44 && progress <= 0.70) activeIndex = 2;
-          else if (progress >= 0.72 && progress <= 1.0) activeIndex = 3;
+          if (progress >= 0.18 && progress <= 0.42) activeIndex = 1;
+          else if (progress >= 0.45 && progress <= 0.68) activeIndex = 2;
+          else if (progress >= 0.71 && progress <= 0.94) activeIndex = 3;
 
           setActiveCard((prev) => {
             if (prev !== activeIndex) {
@@ -229,7 +230,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[180vh] md:h-[250vh] bg-background-custom select-none"
+      className="relative w-full h-[260vh] md:h-[380vh] bg-background-custom select-none"
     >
       {/* Sticky Inner Frame Wrapper */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">

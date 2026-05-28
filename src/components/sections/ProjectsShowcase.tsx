@@ -178,16 +178,16 @@ export function ProjectsShowcase() {
 
           // Evaluate active project index bands
           let activeIndex = 0;
-          if (progress >= 0.05 && progress < 0.20) activeIndex = 1;
-          else if (progress >= 0.20 && progress < 0.35) activeIndex = 2;
-          else if (progress >= 0.35 && progress < 0.50) activeIndex = 3;
-          else if (progress >= 0.50 && progress < 0.65) activeIndex = 4;
-          else if (progress >= 0.65 && progress < 0.80) activeIndex = 5;
+          if (progress >= 0.06 && progress < 0.21) activeIndex = 1;
+          else if (progress >= 0.21 && progress < 0.36) activeIndex = 2;
+          else if (progress >= 0.36 && progress < 0.51) activeIndex = 3;
+          else if (progress >= 0.51 && progress < 0.66) activeIndex = 4;
+          else if (progress >= 0.66 && progress < 0.81) activeIndex = 5;
 
           setActiveProj(activeIndex);
 
           // Evaluates bottom CTA visibility zone
-          setShowCta(progress >= 0.80);
+          setShowCta(progress >= 0.83);
 
           tickingRef.current = false;
         });
@@ -209,7 +209,7 @@ export function ProjectsShowcase() {
     <section
       ref={sectionRef}
       id="showcase"
-      className="relative w-full h-[220vh] md:h-[300vh] bg-zinc-950 text-white overflow-clip select-none"
+      className="relative w-full h-[300vh] md:h-[480vh] bg-zinc-950 text-white overflow-clip select-none"
     >
       {/* Sticky Inner Frame */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center">
