@@ -13,6 +13,17 @@ export function CalendlyModal() {
   const [goal, setGoal] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  React.useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
+
   if (!isModalOpen) return null;
 
   const steps = [

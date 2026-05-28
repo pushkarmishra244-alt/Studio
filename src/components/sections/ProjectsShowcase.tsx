@@ -230,7 +230,7 @@ export function ProjectsShowcase() {
               return (
                 <div
                   key={proj.id}
-                  className={`absolute top-1/2 left-0 -translate-y-1/2 w-full glass-surface border-zinc-850 bg-zinc-950/70 p-8 rounded-3xl space-y-5 transition-all duration-500 transform ${
+                  className={`absolute top-1/2 left-0 -translate-y-1/2 w-full glass-surface border-zinc-850 bg-zinc-950/70 p-5 sm:p-8 rounded-2xl sm:rounded-3xl space-y-4 sm:space-y-5 transition-all duration-500 transform ${
                     isActive
                       ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
                       : "opacity-0 scale-95 -translate-x-8 pointer-events-none"

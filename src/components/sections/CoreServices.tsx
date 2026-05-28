@@ -27,7 +27,7 @@ export function CoreServices() {
         <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           
           {/* Card 1: Interactive Engineering (Spans 2 columns on desktop) */}
-          <AnimatedItem className="md:col-span-2 group relative card-surface p-8 md:p-10 flex flex-col justify-between min-h-[380px] hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden">
+          <AnimatedItem className="md:col-span-2 group relative card-surface p-6 md:p-10 flex flex-col justify-between min-h-[380px] hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden">
             <div className="absolute top-0 right-0 w-44 h-44 rounded-full bg-accent/[0.03] dark:bg-accent/[0.05] blur-2xl group-hover:bg-accent/[0.07] transition-all duration-500" />
             
             <div className="space-y-6">
@@ -64,7 +64,7 @@ export function CoreServices() {
           </AnimatedItem>
 
           {/* Card 2: Brand systems (Spans 1 column on desktop) */}
-          <AnimatedItem className="group relative card-surface p-8 flex flex-col justify-between min-h-[380px] hover:shadow-lg">
+          <AnimatedItem className="group relative card-surface p-6 md:p-8 flex flex-col justify-between min-h-[380px] hover:shadow-lg">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div className="p-3.5 rounded-2xl border border-zinc-200/50 dark:border-zinc-850 dark:bg-zinc-950/40 text-accent">
@@ -90,7 +90,7 @@ export function CoreServices() {
           </AnimatedItem>
 
           {/* Card 3: Deep Architecture (Spans 3 columns on desktop for scale) */}
-          <AnimatedItem className="md:col-span-3 group relative card-surface p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-8 hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden">
+          <AnimatedItem className="md:col-span-3 group relative card-surface p-6 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-8 hover:shadow-lg dark:hover:shadow-black/40 overflow-hidden">
             <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-accent/[0.02] dark:bg-accent/[0.04] blur-3xl group-hover:bg-accent/[0.06] transition-all duration-500" />
             
             <div className="space-y-6 max-w-xl">

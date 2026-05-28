@@ -64,7 +64,7 @@ export function TestimonialsStats() {
 
           <div className="space-y-6 md:space-y-8">
             {reviews.map((rev) => (
-              <AnimatedItem key={rev.author} className="card-surface p-8 space-y-5 hover:shadow-md relative overflow-hidden">
+              <AnimatedItem key={rev.author} className="card-surface p-6 md:p-8 space-y-5 hover:shadow-md relative overflow-hidden">
                 <Quote className="absolute top-6 right-6 w-10 h-10 text-zinc-100 dark:text-zinc-900 pointer-events-none z-0" />
                 
                 <p className="font-sans text-xs sm:text-sm text-foreground-custom leading-relaxed italic relative z-10">

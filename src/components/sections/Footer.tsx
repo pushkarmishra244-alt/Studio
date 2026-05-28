@@ -97,10 +97,9 @@ export function Footer() {
         <div className="border-t border-zinc-200/60 dark:border-zinc-800/40" />
 
         {/* Bottom copyright segment */}
-        <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-6 text-[10px] font-mono text-zinc-400">
-          <div className="space-y-1 text-center sm:text-left">
-            <span>© 2026 EXPERIENCESTUDIO. ALL SYSTEM CORES SECURED.</span>
-            <span className="block text-[9px] text-zinc-400/80">PRODUCT OF AGENCY ARCHITECTURE DESIGNS INC.</span>
+        <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-6 text-xs font-mono text-zinc-500 dark:text-zinc-400">
+          <div className="text-center sm:text-left">
+            <span>© 2026 Pushkar Mishra. All rights reserved.</span>
           </div>
 
           <button

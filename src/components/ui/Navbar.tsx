@@ -21,6 +21,17 @@ export function Navbar() {
     }
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleTheme = () => {
     if (isThemeDark) {
       document.documentElement.classList.remove("dark");
@@ -95,19 +106,19 @@ export function Navbar() {
             {/* Theme Toggle (Mobile) */}
             <button
               onClick={toggleTheme}
-              className="p-2.5 rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-zinc-600 dark:text-zinc-400 cursor-pointer"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-zinc-600 dark:text-zinc-400 cursor-pointer"
               aria-label="Toggle visual theme"
             >
-              {isThemeDark ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
+              {isThemeDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
 
             {/* Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2.5 rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-zinc-900 dark:text-zinc-100 cursor-pointer"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-zinc-200/50 dark:border-zinc-800/40 text-zinc-900 dark:text-zinc-100 cursor-pointer"
               aria-label="Toggle navigation menu"
             >
-              {isMobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+              {isMobileMenuOpen ? <X className="w-4.5 h-4.5" /> : <Menu className="w-4.5 h-4.5" />}
             </button>
           </div>
         </div>
@@ -132,20 +143,21 @@ export function Navbar() {
               <span className="font-mono text-xs font-semibold tracking-wider text-muted-custom">NAVIGATION</span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-1 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500"
+                className="w-11 h-11 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500 cursor-pointer"
+                aria-label="Close navigation menu"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Menu Links */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-sans text-lg font-medium text-foreground-custom hover:text-accent transition-colors py-1"
+                  className="font-sans text-lg font-medium text-foreground-custom hover:text-accent transition-colors py-3 block touch-none"
                 >
                   {item.label}
                 </a>

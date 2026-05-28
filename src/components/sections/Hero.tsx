@@ -262,7 +262,7 @@ export function Hero() {
         <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto px-6 md:px-12 flex items-center z-20 pointer-events-none">
           {/* Card 1: Left */}
           <div
-            className={`absolute left-6 md:left-12 max-w-sm card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
+            className={`absolute top-1/2 -translate-y-1/2 left-6 md:left-12 max-w-sm w-[calc(100%-3rem)] md:w-auto card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
               activeCard === 1
                 ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
                 : "opacity-0 scale-95 -translate-x-6 pointer-events-none"
@@ -279,7 +279,7 @@ export function Hero() {
 
           {/* Card 2: Right */}
           <div
-            className={`absolute right-6 md:right-12 max-w-sm card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
+            className={`absolute top-1/2 -translate-y-1/2 right-6 md:right-12 max-w-sm w-[calc(100%-3rem)] md:w-auto card-surface border-zinc-200/50 p-6 md:p-8 space-y-4 transition-all duration-500 transform ${
               activeCard === 2
                 ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
                 : "opacity-0 scale-95 translate-x-6 pointer-events-none"
